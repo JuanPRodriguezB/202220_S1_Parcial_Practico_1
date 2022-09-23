@@ -38,15 +38,15 @@ import uk.co.jemos.podam.common.PodamExclude;
  * @author ISIS2603
  */
 
-@Entity
 @Getter
 @Setter
-
+@Entity
 public class HabitacionEntity extends BaseEntity {
+
 	private Integer id;
 	private Integer personas;
 	private Integer camas;
-	private Integer baños;
+	private Integer banios;
 
 	@PodamExclude
 	@ManyToOne

@@ -29,11 +29,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -46,16 +42,17 @@ import uk.co.jemos.podam.common.PodamExclude;
  * @author ISIS2603
  */
 
-@Entity
+
 @Getter
 @Setter
-
+@Entity
 public class HotelEntity extends BaseEntity {
+
 	private String nombre;
 	private String direccion;
 	private Integer estrellas;
 
 	@PodamExclude
-	@OneToMany(mappedBy = "hotel", cascade = CascadeType.PERSIST, orphanRemoval = true);
+	@OneToMany(mappedBy = "hotel", cascade = CascadeType.PERSIST, orphanRemoval = true)
 	private List<HabitacionEntity> habitaciones = new ArrayList<>();
 }
