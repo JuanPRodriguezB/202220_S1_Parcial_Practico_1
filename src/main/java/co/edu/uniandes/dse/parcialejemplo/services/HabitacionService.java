@@ -18,14 +18,14 @@ public class HabitacionService {
     HabitacionRepository habitacionRepository;
 
     @Transactional
-    public HabitacionEntity createHotel(HabitacionEntity habitacionEntity) throws IllegalOperationException
+    public HabitacionEntity createHabitacion(HabitacionEntity habitacionEntity) throws IllegalOperationException
     {
         log.info("Inicia la creacion de una habitacion");
-        if (!habitacionEntity.getBanios() <= habitacionEntity.getPersonas()){
+        if (!(habitacionEntity.getBanios() <= habitacionEntity.getPersonas())){
             throw new IllegalOperationException("El numero de personas debe ser mayor o igual al numero de banios");
         }
 
-        log.info("Termina proceso de creacion de hotel");
+        log.info("Termina proceso de creacion de habitacion");
         return habitacionRepository.save(habitacionEntity);
     }
 }

@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import co.edu.uniandes.dse.parcialejemplo.entities.HotelEntity;
+import co.edu.uniandes.dse.parcialejemplo.entities.HabitacionEntity;
 
 @Repository
-public interface HabitacionRepository extends JpaRepository<HotelEntity, Long>{
-    List <HotelEntity> findByID(Long id);
+public interface HabitacionRepository extends JpaRepository<HabitacionEntity, Long>{
+    List <HabitacionEntity> findByID(Long id);
 }

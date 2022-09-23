@@ -43,7 +43,7 @@ import uk.co.jemos.podam.common.PodamExclude;
 @Entity
 public class HabitacionEntity extends BaseEntity {
 
-	private Integer id;
+	private Integer idHabitacion;
 	private Integer personas;
 	private Integer camas;
 	private Integer banios;
